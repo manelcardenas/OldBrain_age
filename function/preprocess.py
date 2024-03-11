@@ -17,6 +17,7 @@ def processmgz(brains):
     coord = []
     for i in range(X.shape[0]):
         buf = X[i, :, :, :]
+        print(buf.shape)
         buf = buf.reshape((128, 128, 128))
         xmin = 0
         xmax = 0
@@ -72,7 +73,7 @@ def processmgz(brains):
         ):
             data_new.append(
                 buf[
-                    int(int(co[0]) - (x_range / 2)) : int(int(co[0]) + (x_range / 2)),
+                    int(int(co[0]) - (x_range / 2)) : int(int(co[0]) + (x_range / 2)), #No tiene sentido, estas añadiendo redundancia.  co[0] es 89, co[1]=109.5 y co[2]=77 y x_range= 82, y_range=86, z_range=100. Sin embargo da igual. El resiltado siempre va a ser 82
                     int(int(co[1]) - (y_range / 2)) : int(int(co[1]) + (y_range / 2)),
                     int(int(co[2]) - (z_range / 2)) : int(int(co[2]) + (z_range / 2)),
                 ]
