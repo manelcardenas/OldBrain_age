@@ -4,7 +4,7 @@ import os
 import sys
 import nibabel as nib
 
-sys.path.append("/home/usuaris/imatge/joan.manel.cardenas/brainAge/USC_BA_estimator/function")
+sys.path.append("/home/usuaris/imatge/joan.manel.cardenas/brainAge/BA_estimator/function")
 
 import pandas as pd
 from preprocess_2 import processmgz
@@ -21,11 +21,11 @@ import saliencymaps
 
 
 # path to the folder
-dir_test_brain_age = "/home/usuaris/imatge/joan.manel.cardenas/brainAge"
+dir_test_brain_age = "/home/usuaris/imatge/joan.manel.cardenas/brainAge/BA_estimator/woman_data"
 
 # path to the h5 file
 path_to_model_weights = os.path.join(
-    dir_test_brain_age, "USC_BA_estimator/function/model/saved-model-317.h5"
+    "/home/usuaris/imatge/joan.manel.cardenas/brainAge/BA_estimator/function/model/saved-model-317.h5"
 )
 
 

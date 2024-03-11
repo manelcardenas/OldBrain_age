@@ -8,7 +8,7 @@ import numpy as np
 
 def female_data():
     # Leer el archivo CSV con la información de los sujetos
-    demographics = pd.read_csv('/home/usuaris/imatge/joan.manel.cardenas/brainAge/demographics_icd_new_date3.csv')
+    demographics = pd.read_csv('/home/usuaris/imatge/joan.manel.cardenas/brainAge/BA_estimator/demographics_icd_new_date3.csv')
 
     # Ordenar los datos por el ID de los sujetos
     demographics.loc[:, 'Label'] = demographics['ID'].astype(str)
@@ -49,11 +49,10 @@ def female_data():
                         #zoomed_data = zoom(data, (0.703296, 0.5871559633, 0.703296))
                         ## TESTING Guardar la imagen como un nuevo archivo .nii
                         zoomed_img = nib.Nifti1Image(data.astype(np.float32), img.affine) 
-                        output_path = f'/home/usuaris/imatge/joan.manel.cardenas/brainAge/{subject_id}_before_zoom.nii'
+                        output_path = f'/home/usuaris/imatge/joan.manel.cardenas/brainAge/BA_estimator/woman_data/{subject_id}_before_zoom.nii'
                         nib.save(zoomed_img, output_path)
                         # Agregar información a la lista correspondiente
                         file_info_zoomed = (subject_id, data)
                         female_files_info.append(file_info_zoomed)
-                        #hola mundo
 
     return female_files_info

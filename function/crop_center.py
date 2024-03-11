@@ -4,7 +4,7 @@ from load_female_data import female_data
 import nibabel as nib
 import os
 
-dir_test_brain_age = "/home/usuaris/imatge/joan.manel.cardenas/brainAge"
+dir_test_brain_age = "/home/usuaris/imatge/joan.manel.cardenas/brainAge/BA_estimator"
 
 def crop_center(data, out_sp):
     """
